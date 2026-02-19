@@ -1,0 +1,13 @@
+.section{
+    padding: 6rem 0;
+    position: relative;
+    z-index: 0;
+}
+.section, header, footer{
+    .inner{
+        max-width: var(--maxw);
+        margin: auto;
+        position: relative;
+        height: 100%;
+    }
+}
