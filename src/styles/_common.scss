@@ -7,7 +7,9 @@
         margin-top: 4rem;
         transition: margin-top .3s;
     }
-
+    &#collection{
+        background-color: var(--bg2);
+    }
     h2.tit{
         font-size: 7.3rem;
         font-weight: 200;

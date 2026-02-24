@@ -1,0 +1,21 @@
+.collection-inner{
+    text-align: center;
+    .collection-slider{
+
+        .img-wrap{
+            width: 36rem;
+            height: 36rem;
+            overflow: hidden;
+            border-radius: 1rem;
+            background-color: #f2f2f2;
+            align-content: center;
+            margin: auto;
+            img{
+                width: 110%;
+            }
+        }
+        .swiper-pagination{
+            position: static;
+        }
+    }
+}
