@@ -1,0 +1,51 @@
+header{
+    position: fixed;
+    top: 4rem;
+    width: 100%;
+    z-index: 5;
+    height: 10.5rem;
+    transition: .3s;
+    .inner{
+        max-width: 160rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .nav-list{
+            display: flex;
+            gap: 2rem;
+            a{
+                display: block;
+                font-size: 1.8rem;
+                text-transform: capitalize;
+                color: var(--primary);
+                padding: 0px .5rem;
+                position: relative;
+                //a의 after
+                &::after{
+                    display: block;
+                    position: absolute;
+                    width: 0%;
+                    height: .1rem;
+                    background-color: var(--primary);
+                    content: "";
+                    left: 0;
+                    transition: width 0.3s ease;
+                }
+                &:hover::after{
+                    width: 100%;
+                }
+            }
+        }
+        h1.tit{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .util-list{
+            display: flex;
+            gap: 1.2rem;
+        }
+    }
+}

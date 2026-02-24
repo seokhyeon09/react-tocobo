@@ -1,4 +1,5 @@
 import './styles/main.scss'
+import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Hero from './sections/Hero'
 import SkinCare from './sections/SkinCare'
@@ -7,10 +8,27 @@ import Review from './sections/Review'
 import Follow from './sections/Follow'
 import Instargram from './sections/Instargram'
 import Footer from './components/Footer'
+import TopBanner from './components/TopBanner'
+import FixedTopBtn from './components/FixedTopBtn'
 
 function App() {
+  const [topBanner, setTopBanner]=useState('')
+  const [isScrolled, setIsScrolled]=useState(false)
+
+  useEffect(()=>{
+    const handleScroll = () =>{
+      const scrollTop = window.scrollY
+      setIsScrolled(scrollTop>100)
+    }
+    window.addEventListener('scroll',handleScroll)
+  },[])
+
+  const upTopBanner =()=>{
+    setTopBanner('up')
+  }
   return (
-    <div>
+    <div className={`app-container ${topBanner} ${isScrolled? 'scrolled':''}`}>
+      <TopBanner onClick={upTopBanner}/>
       <Header />
       <main>
         <section id='hero' className='section'><Hero /></section>
@@ -21,6 +39,7 @@ function App() {
         {/* <section id='review' className='section'><Review /></section> */}
       </main>
       <Footer />
+      <FixedTopBtn changeScroll={isScrolled}/>
     </div>
   )
 }

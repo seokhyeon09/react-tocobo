@@ -5,7 +5,7 @@ const Nav = () => {
     const navLinks = headerData.menus
     const scrollTo=useSmoothScroll()
   return (
-    <ul>
+    <ul className='nav-list'>
         {navLinks.map((nav)=>(
             <li key={nav.id}>
                 <a

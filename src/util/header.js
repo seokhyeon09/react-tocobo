@@ -37,5 +37,23 @@ export const headerData={
             href:'#instargram',
             type:'section',
         },
-    ]
+    ],
+    utils: [
+        { id: "search", label: "검색", icon: img("icon_search.svg"), href: "#" },
+        { id: "account", label: "마이", icon: img("icon_myp.svg"), href: "#" },
+        { id: "cart", label: "장바", icon: img("icon_cart.svg"), href: "#" },
+    ],
+    // 상단 공지/배너 (TopBanner용)
+    topBanner: {
+        enabled: true,
+        height: 64,                   // px
+        items: [
+            { id: "tb-1", text: "새로운 소식이 있습니다.", href: "#" },
+            { id: "tb-2", text: "업데이트 안내", href: "#" },
+            { id: "tb-3", text: "이벤트 진행 중!", href: "#" },
+        ],
+        closeIcon: img("icon_pop_close_b.png"),
+        background: "#DC272D",
+        color: "#fff",
+    },
 }
