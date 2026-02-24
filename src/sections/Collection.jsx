@@ -73,11 +73,11 @@ const Collection = () => {
       <a href="#"
         className='prev'
         onClick={(e) => e.preventDefault()}
-        ref={prevRef}>prev</a>
+        ref={prevRef}></a>
       <a href="#"
         className='next'
         onClick={(e) => e.preventDefault()}
-        ref={nextRef}>next</a>
+        ref={nextRef}></a>
     </div>
   )
 }

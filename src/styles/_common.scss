@@ -38,6 +38,7 @@
 
         &::after{
             content: "";
+            border-radius: 6rem;
             display: block;
             position: absolute;
             width: 100%;
@@ -46,7 +47,7 @@
             background-color: var(--primary);
             left: 0;
             top: 0;
-            z-index: -1;
+            z-index: 0;
             transition: all .5s;
         }
         &:hover{
@@ -54,6 +55,7 @@
             &::after{
                 opacity: 1;
                 background-color: var(--bg);
+                z-index: -1;
             }
         }
     }
