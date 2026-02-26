@@ -1,16 +1,18 @@
 import React from 'react'
+import { headerData } from '../util/header'
 
 const Util = () => {
+  const utilData = headerData.utils
   return (
-    <div>
-        <ul>
-            <li><a href="/"><img src="/img/icon_search.svg" alt="search" /></a></li>
-            <li><a href="/"><img src="/img/icon_language.svg" alt="language" /></a></li>
-            <li><a href="/"><img src="/img/icon_myp.svg" alt="myp" /></a></li>
-            <li><a href="/"><img src="/img/icon_cart.svg" alt="cart" /></a></li>
-        </ul>
-
-    </div>
+    <ul className='util-list'>
+      {utilData.map((u)=>(
+        <li key={u.id}>
+          <a href={u.href}>
+            <img src={u.icon} alt="" />
+          </a>
+        </li>
+      ))}
+    </ul>
   )
 }
 

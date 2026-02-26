@@ -1,0 +1,39 @@
+.FixedTopBtn{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 5;
+    text-align: center;
+    // background-color: var(--primary);
+    // display: none;
+    // &.scrollFixed{
+    //     display: block;
+    // }
+    >*{
+        display: block;
+    }
+    .top-btn{
+        width: 5.6rem;
+        height: 5.6rem;
+        background: var(--primary) url(/img/icon_top.svg) center/40% no-repeat;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 0;
+    }
+    .talk-btn{
+        width: 5.6rem;
+        height: 5.6rem;
+        background: url(/img/icon_talk.svg) no-repeat center/contain;
+        margin: 1rem 0;
+        font-size: 1.5rem;
+        color: var(--bg);
+        align-content: center;
+    }
+    p{
+        color: var(--primary);
+        font-family: 'Source Serif 4', serif;
+        font-size: italic;
+        font-weight: 600;
+        font-size: 1.6rem;
+    }
+}

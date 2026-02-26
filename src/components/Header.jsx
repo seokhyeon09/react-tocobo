@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles/Header.scss'
 import Nav from './Nav'
 import Util from './Util'
 import { headerData } from '../util/header'
