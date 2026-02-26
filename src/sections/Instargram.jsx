@@ -1,5 +1,5 @@
 import React from 'react'
-import instar from '../util/Instar'
+import instar from '../util/instar'
 import './styles/Instargram.scss'
 const Instargram = () => {
   return (

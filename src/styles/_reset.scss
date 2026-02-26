@@ -31,6 +31,7 @@ body{
     // variables에서 설정한 변수를 bg에 집어넣음
     background-color: var(--bg);
     color: var(--fg);
+    overflow-x: hidden;
 }
 *{
     font-family: "Circular Std", "Noto Sans KR";
@@ -49,7 +50,7 @@ button {
 }
 
 section {
-  min-height: 100vh;
+  // min-height: 100vh;
   &:nth-child(odd){
     // background-color: rgb(255,235,218);
   }
