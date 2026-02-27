@@ -1,28 +1,39 @@
-header{
+header {
     position: fixed;
     top: 4rem;
     width: 100%;
     z-index: 5;
     height: 10.5rem;
     transition: .3s;
-    .inner{
+
+    .inner {
         max-width: 160rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
-        .nav-list{
+        .mob-nav-btn {
+            display: none;
+
+            @media screen and (max-width:1111px) {
+                display: block;
+            }
+        }
+
+        .nav-list {
             display: flex;
             gap: 2rem;
-            a{
+
+            a {
                 display: block;
                 font-size: 1.8rem;
                 text-transform: capitalize;
                 color: var(--primary);
                 padding: 0px .5rem;
                 position: relative;
+
                 //a의 after
-                &::after{
+                &::after {
                     display: block;
                     position: absolute;
                     width: 0%;
@@ -32,20 +43,35 @@ header{
                     left: 0;
                     transition: width 0.3s ease;
                 }
-                &:hover::after{
+
+                &:hover::after {
                     width: 100%;
                 }
             }
+
+            @media screen and (max-width : 1111px) {
+                display: none;
+            }
         }
-        h1.tit{
+
+        h1.tit {
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
         }
-        .util-list{
+
+        .util-list {
             display: flex;
             gap: 1.2rem;
+
+            li {
+                @media screen and (max-width : 1111px) {
+                    &:not(:last-child) {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }

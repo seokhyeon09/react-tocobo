@@ -23,9 +23,7 @@ const TopBanner = ({onClick}) => {
 
         {tbData.map((t) => (
           <SwiperSlide key={t.id}>
-            <a href={t.href}>
-              {t.text}
-            </a>
+            <a href={t.href}>{t.text}</a>
           </SwiperSlide>
         ))}
       </Swiper>
