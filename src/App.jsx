@@ -19,8 +19,8 @@ function App() {
 
   const [mNavOpen, setMNavOpen] = useState(false)
 
-  const handleMNavOpen = ()=>setMNavOpen(true)
-  const handleMNavClose = ()=>setMNavOpen(false)
+  const handleMNavOpen = () => setMNavOpen(true)
+  const handleMNavClose = () => setMNavOpen(false)
 
   useEffect(()=>{
     AOS.init({
@@ -28,6 +28,10 @@ function App() {
       easing:'ease'
     })
   },[])
+
+  useEffect(()=>{
+    document.body.style.overflow=mNavOpen?'hidden':''
+  },[mNavOpen])
 
   useEffect(()=>{
     const handleScroll = () =>{
