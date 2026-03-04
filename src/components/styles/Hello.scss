@@ -2,6 +2,11 @@
     display: flex;
     padding-top: 12rem;
     align-items: center;
+     @media screen and (max-width:1111px) {
+            flex-direction: column;
+            gap: 6rem;
+            padding-top: 6rem;
+        }
     .img-wrap{
         border-radius: 2rem;
         overflow: hidden;

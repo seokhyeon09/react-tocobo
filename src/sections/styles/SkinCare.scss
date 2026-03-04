@@ -1,21 +1,56 @@
-.skincare-inner{
+.skincare-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    h2.tit {
-        color: var(--secondary);
-    }
-    a.btn {
-        background: var(--s-gradient);
-        &:hover {
-            color:var(--secondary)
+
+    @media screen and (max-width:1111px) {
+        flex-direction: column;
+        gap: 4.4rem;
+
+        .t-wrap {
+            text-align: center;
+
         }
     }
-    .slider-wrap{
+
+    h2.tit {
+        color: var(--secondary);
+
+        @media screen and (max-width:1111px) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    a.btn {
+        background: var(--s-gradient);
+
+        &:hover {
+            color: var(--secondary)
+        }
+    }
+
+    .slider-wrap {
         width: 75rem;
         height: 53rem;
         // background-color: salmon;
         position: relative;
+        transform: translateX(10rem);
+
+        @media screen and (max-width:1440px) {
+            height: 46rem;
+
+
+        }
+
+        @media screen and (max-width:1111px) {
+
+            transform: translateX(0);
+            width: 90vw;
+            height: 40rem;
+        }
+        @media screen and (max-width:599px) {
+            height: 30rem;
+        }
         // border: 1px solid #000;
         .in {
             position: absolute;
@@ -23,10 +58,22 @@
             height: 100%;
             // background-color: rgba(244, 165, 96, 0.432);
 
-
-            .skincare-slider{
+            @media screen and (max-width:1440px) {
+                width: 176%;
+            }
+           @media screen and (max-width:999px) {
+            width: 200%;
+           }
+            .skincare-slider {
                 height: 100%;
-                a{
+
+                .swiper-slide {
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                a {
                     display: block;
                     height: 100%;
                     font-size: 0;

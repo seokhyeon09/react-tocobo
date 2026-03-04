@@ -1,80 +1,132 @@
-.hero-container{
+.hero-container {
     height: 90rem;
-    h2.tit{
+
+    h2.tit {
         font-size: clamp(5rem, 6vw, 7.3rem);
     }
-    .swiper{
+
+    .swiper {
         height: 100%;
     }
-    .hero-slide{
+
+    .hero-slide {
         height: 100%;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        .inner{
+
+        .inner {
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            max-width: 164rem;
 
-            p.txt{
+            @media screen and (max-width:1111px) {
+                .t-wrap {
+                    position: absolute;
+                    left: 2rem;
+                    bottom: 12.5rem;
+                }
+            }
+            @media screen and (max-width:599px) {
+                .t-wrap{
+                    a.btn{
+                        display: none;
+                    }
+                }
+            }
+            p.txt {
                 font-size: 2.1rem;
                 margin-top: 4rem;
+
+                @media screen and (max-width:1111px) {
+                    margin: 2rem 0 0;
+                }
+                @media screen and (max-width:599px) {
+                    margin: 1rem 0 0;
+                }
             }
+
         }
-        &.hs-1{
-            h2.tit{
+
+        &.hs-1 {
+            h2.tit {
                 color: var(--main-slider01-tit);
             }
-            p.txt{
+
+            p.txt {
                 color: var(--main-slider01-sub);
             }
-            a.btn{
+
+            a.btn {
                 background: var(--p-gradient);
             }
         }
-        &.hs-2{
-            h2.tit{
+
+        &.hs-2 {
+            h2.tit {
                 color: var(--main-slider02-tit);
             }
-            p.txt{
+
+            p.txt {
                 color: var(--main-slider02-sub);
             }
-            a.btn{
+
+            a.btn {
                 background: var(--s-gradient);
-                &:hover{
+
+                &:hover {
                     color: var(--main-slider02-tit);
                 }
             }
         }
-        &.hs-3{
-            .inner{
-                h2.tit{
-                    color: var(--main-slider03-tit);
-                }
-                p.txt{
-                    color: var(--main-slider03-sub);
-                }
-                a.btn{
-                background: var(--t-gradient);
-            }
+
+        &.hs-3 {
+            .inner {
                 text-align: center;
                 justify-content: center;
-                
+
+                @media screen and (max-width:1111px) {
+                    .t-wrap {
+                        // width: 100%;
+                        // left: 0;
+                        text-align: left;
+                    }
+                }
+
+                h2.tit {
+                    color: var(--main-slider03-tit);
+                }
+
+                p.txt {
+                    color: var(--main-slider03-sub);
+                }
+
+                a.btn {
+                    background: var(--t-gradient);
+                }
+
+
+
             }
         }
-        &.hs-4{
-            h2.tit{
+
+        &.hs-4 {
+            h2.tit {
                 color: var(--main-slider04-tit);
             }
-            p.txt{
+
+            p.txt {
                 color: var(--main-slider04-sub);
             }
-            a.btn{
+
+            a.btn {
                 background: var(--h-gradient);
             }
         }
     }
-    .hero-nav{
+
+    .hero-nav {
         position: absolute;
         z-index: 3;
         left: 7.5vw;
@@ -82,42 +134,53 @@
         display: flex;
         align-items: center;
         gap: 2rem;
+
+        @media screen and (max-width:1111px) {
+            left: 2rem;
+            bottom: 3.9rem;
+        }
+
         .arr-prev,
-        .arr-next{
+        .arr-next {
             width: 5rem;
             height: 1.7rem;
-        
+
             background-position: center;
             background-repeat: no-repeat;
             background-size: contain;
             font-size: 0;
         }
-        .arr-prev{
+
+        .arr-prev {
             background-image: url(/img/icon_main_ban_arrow_prev.svg);
         }
-        .arr-next{
+
+        .arr-next {
             background-image: url(/img/icon_main_ban_arrow_next.svg);
         }
-        .swiper-pagination-fraction{
+
+        .swiper-pagination-fraction {
             width: 5rem;
             height: 5rem;
             position: relative;
             font-size: 0;
             color: var(--bg);
-            .swiper-pagination-current{
+
+            .swiper-pagination-current {
                 font-size: 2.2rem;
                 position: absolute;
                 left: 0;
                 top: 0;
             }
-            .swiper-pagination-total{
+
+            .swiper-pagination-total {
                 font-size: 2.2rem;
                 position: absolute;
                 right: 0;
                 bottom: 0;
             }
 
-            &::after{
+            &::after {
                 content: "";
                 display: block;
                 position: absolute;

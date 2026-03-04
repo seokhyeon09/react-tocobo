@@ -23,6 +23,10 @@
             left: 0;
             bottom: 0;
             background-color: var(--bg3);
+
+            @media screen and (max-width:1111px) {
+                height: 15rem;
+            }
         }
     }
 
@@ -32,7 +36,7 @@
     }
 
     h2.tit {
-        font-size:clamp(4rem, 5vw, 7.3rem);
+        font-size: clamp(4rem, 5vw, 7.3rem);
         font-weight: 200;
     }
 
@@ -63,6 +67,7 @@
         @media screen and (max-width:1111px) {
             font-size: 1.3rem;
             padding: 0 3rem;
+            height: 4.1rem;
         }
 
         &::after {
@@ -145,9 +150,11 @@ footer {
 
 
 @keyframes up {
-    from{
-        transform:translateY(0)
-    }to{
+    from {
+        transform: translateY(0)
+    }
+
+    to {
         transform: translateY(-2rem);
     }
 }
