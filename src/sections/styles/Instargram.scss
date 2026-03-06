@@ -20,5 +20,9 @@
                 background-position: center;
             }
         }
+
+        @media screen and (max-width:1280px) {
+            flex-wrap: wrap;
+        }
     }
 }

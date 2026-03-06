@@ -32,7 +32,7 @@ const Collection = () => {
     <div className='inner collection-inner'>
       <div className="t-wrap">
         <h2 className="tit">
-          TOCOBO COLLECTION
+          TOCOBO <br className='mob-only'/> COLLECTION
         </h2>
         <p className='txt'>
           Shop By Category

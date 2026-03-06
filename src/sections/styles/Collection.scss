@@ -61,11 +61,11 @@
             align-content: center;
             margin: 2.5rem auto 0;
 
-            img {
-                // width: 110%;
-                // height: 110%;
-                // animation: up 2s infinite alternate;
-            }
+            // img {
+            //     width: 110%;
+            //     height: 110%;
+            //     animation: up 2s infinite alternate;
+            // }
 
 
             @media screen and (max-width:1280px) {
@@ -84,7 +84,7 @@
 
             @media screen and (max-width:1280px) {
                 margin: 2rem auto 0;
-                width: 80%;
+                width: 90vw;
             }
 
             .swiper-pagination-progressbar-fill {
